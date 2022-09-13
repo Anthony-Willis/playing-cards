@@ -22,7 +22,7 @@ public enum Rank {
     this.symbol = symbol;
   }
 
-  public String Symbol() {
+  public String symbol() {
     return symbol;
   }
 
