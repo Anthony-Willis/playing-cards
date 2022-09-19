@@ -6,15 +6,16 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 
-public class Deck  implements Iterable<Card>{
-//fields, then ctors, then methods
+public class Deck implements Iterable<Card> {
+
+  //fields, then ctors, then methods
   private final List<Card> cards;//fields
 
   //constructor
   public Deck() {
     cards = new ArrayList<>();
-    for (Suit suit : Suit.values()){
-      for (Rank rank : Rank.values()){
+    for (Suit suit : Suit.values()) {
+      for (Rank rank : Rank.values()) {
         Card card = new Card(rank, suit);
         cards.add(card);
       }
@@ -42,11 +43,11 @@ public class Deck  implements Iterable<Card>{
   @Override
   public boolean equals(Object obj) {
     boolean result;
-    if(this == obj) {
+    if (this == obj) {
       result = true;
     } else if (obj instanceof Deck) {
-      result = cards.equals(((Deck) obj) .cards);
-    }else {
+      result = cards.equals(((Deck) obj).cards);
+    } else {
       result = false;
     }
     return result;
@@ -54,7 +55,7 @@ public class Deck  implements Iterable<Card>{
 
   @Override
   public String toString() {
-    return super.toString();
+    return cards.toString();
   }
 }
 
