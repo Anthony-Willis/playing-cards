@@ -20,7 +20,7 @@ public class Main {
     System.out.println(deck);
   }
 
-  private class ColorFirst implements Comparator<Card> {
+  private static class ColorFirst implements Comparator<Card> {
 
 
     @Override
